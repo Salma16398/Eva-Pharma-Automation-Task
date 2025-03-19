@@ -23,8 +23,8 @@ public class TaskPage {
 	private WebElement btnLogin;
 	@FindBy(xpath = "//*[@href='/web/index.php/admin/viewAdminModule']")
 	private WebElement clickOnadmin;
-    @FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div:nth-child(2) > div > span")
-    private WebElement recordCountElement;
+   	@FindBy(css = "#app > div.oxd-layout.orangehrm-upgrade-layout > div.oxd-layout-container > div.oxd-layout-context > div > div.orangehrm-paper-container > div:nth-child(2) > div > span")
+    	private WebElement recordCountElement;
 	@FindBy(xpath = "//*[@class='oxd-button oxd-button--medium oxd-button--secondary']")
 	private WebElement Addbtn;
 	@FindBy(xpath = "//*[@class='oxd-icon bi-caret-down-fill oxd-select-text--arrow']")
@@ -79,18 +79,14 @@ public class TaskPage {
 		clickOnadmin.click();
 		
 	}
-    public int getRecordCount() {
+    	public int getRecordCount() {
         String text = recordCountElement.getText();
         return extractNumberFromText(text);
     }
 
-    private int extractNumberFromText(String text) {
+    	private int extractNumberFromText(String text) {
         return Integer.parseInt(text.replaceAll("[^0-9]", ""));
     }
-    //public int getRecordCount() {
-      //  String countText = recordCountElement.getText().trim(); // Get text and trim spaces
-        //return Integer.parseInt(countText); // Convert text to integer
-    //}
     
 	public void Addbtn() {
 		Addbtn.click();
