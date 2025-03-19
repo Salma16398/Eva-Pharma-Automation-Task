@@ -3,7 +3,6 @@ package stepdefinition;
 import org.openqa.selenium.WebDriver;
 
 import Pages.TaskPage;
-//import dev.failsafe.internal.util.Assert;
 import factory.DriverFactory;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -39,9 +38,8 @@ public class TestTask {
 
 	}
 	
-    private int initialRecordCount;
+   	 private int initialRecordCount;
 
-	//int initialCount;
 	@When("Clicks on Admin tab and gets record")
 	public void clicks_on_the_admin() throws InterruptedException {
 		Thread.sleep(2000);
@@ -105,11 +103,6 @@ public class TestTask {
 	    }
 
     }
-	//@Then("Assert Record")
-	//public void the_record_count_should_increase_by_one() {
-	    //int newCount =TP.getRecordCount();
-	   // Assert.assertEquals(newCount, initialCount + 1, "Record count did not increase!");
-	//}
 	@When("Search by username {string}")
 	public void search_username(String searchusername) throws InterruptedException {
 		Thread.sleep(2000);
